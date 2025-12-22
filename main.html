@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons8-logo-50.svg">
+    <title>E-shop</title>
+</head>
+<body>
+    <nav>
+        <ul class="navList"> 
+            <li>
+                <img class="navLogo" src="icons8-logo-50.svg" alt="Logo">
+                <div class="hamburger">
+                    <div id="lineTop" class="line"></div>
+                    <div id="lineMid" class="line"></div>
+                    <div id="lineBot" class="line"></div>
+                </div>
+            </li>
+            <li><img class="navLogoMobile" src="icons8-logo-50.svg" alt="Logo"></li>
+            <div class="produktNav">
+                <li><a href="main.html">Domov</a></li>
+                <li><a href="produkty.html">Produkty</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </div>
+            <li id="cartOpen"><img class="navCartSvg" src="shopping-cart.svg" alt="Logo"><span id="cartCount" class="cart-count">0</span></li>
+        </ul>
+    </nav>
+    
+    <div class="navPhone">
+        <ul class="navListPhone">
+            <li><a href="main.html">Domov</a></li>
+            <li><a href="produkty.html">Produkty</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
+    
+    <div class="novinka">
+        <h1>iPhone 17 Pro</h1>
+        <a class="kupButton" href="telefony.html">Kúpiť</a>
+        <img id="novinkaIMG" src="land_iphone17pro_edit_removeBG.png">
+    </div>
+
+    <h1 class="h1Zlava">Výpredaj</h1>
+    <div class="zlavaWhole">
+        <img class="left" src="rounded_triangle.svg" onclick="plusImg(-1)">
+            <div class="zlavaLand">
+                <a href="telefony.html"><img class="zlavaItem" src="telefon/RI054b3-modra.webp"></a>
+                <a href="hodinky.html"><img class="zlavaItem" src="hodinky/Apple_watch_ultra3.webp"></a>
+                <a href="telefony.html"><img class="zlavaItem" src="telefon/SAMO0269c4.webp"></a>
+            </div>
+        <img class="right" src="rounded_triangle.svg" onclick="plusImg(1)">
+    </div>
+    <h2 id="zlavaText">Iphone</h2>
+    <footer>
+        <p class="copyright">© 2025. Všetky práva vyhradené.</p>
+    </footer>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <h4>Váš košík</h4>
+            <ul id="cartItems" class="cart-items"></ul>
+            <p class="font-semibold">Spolu: <span id="cartTotal">0 €</span></p>
+            <div class="cart-footer">
+                <button id="cartClose" class="closeBtn">Zavrieť</button>
+                <button class="objednajBtn">Objednať</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_main.js"></script>
+    <script src="produkty_kosik.js"></script>
+</body>
+</html>

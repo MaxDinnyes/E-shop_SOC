@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons8-logo-50.svg">
+    <title>E-shop | Smarthodinky</title>
+</head>
+<body>
+    <nav>
+        <ul class="navList"> 
+            <li>
+                <img class="navLogo" src="icons8-logo-50.svg" alt="Logo">
+                <div class="hamburger">
+                    <div id="lineTop" class="line"></div>
+                    <div id="lineMid" class="line"></div>
+                    <div id="lineBot" class="line"></div>
+                </div>
+            </li>
+            <li><img class="navLogoMobile" src="icons8-logo-50.svg" alt="Logo"></li>
+            <div class="produktNav">
+                <li><a href="main.html">Domov</a></li>
+                <li><a href="produkty.html">Produkty</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </div>
+            <li id="cartOpen"><img class="navCartSvg" src="shopping-cart.svg" alt="Logo"><span id="cartCount" class="cart-count">0</span></li>
+        </ul>
+    </nav>
+
+    <div class="navPhone">
+        <ul class="navListPhone">
+            <li><a href="main.html">Domov</a></li>
+            <li><a href="produkty.html">Produkty</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <div id="produktGrid" class="produktyMain">
+        
+    </div>
+
+    <footer>
+        <p class="copyright">© 2025. Všetky práva vyhradené.</p>
+    </footer>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <h4>Váš košík</h4>
+            <ul id="cartItems" class="cart-items"></ul>
+            <p class="font-semibold">Spolu: <span id="cartTotal">0 €</span></p>
+            <div class="cart-footer">
+                <button id="cartClose" class="closeBtn">Zavrieť</button>
+                <button class="objednajBtn">Objednať</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script_hodinky.js"></script>
+    <script src="produkty_kosik.js"></script>
+    <script>
+        renderProducts(produkty.filter(p => p.category === "hodinky"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centered % Carousel Fixed</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f7f7f7;
+  }
+
+  .zlavaLand {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    height: 150px;
+  }
+
+  .zlavaItem {
+    position: absolute;
+    top: 10%;
+    height: 80%;
+    background: coral;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      left 0.6s ease,
+      width 0.6s ease,
+      transform 0.6s ease,
+      opacity 0.6s ease,
+      z-index 0.6s ease;
+  }
+
+  .middle {
+    width: 30%;
+    opacity: 1;
+    z-index: 3;
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  .side {
+    width: 20%;
+    opacity: 0.6;
+    z-index: 1;
+    transform: translateX(-50%) scale(1);
+  }
+
+  button {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    border: none;
+    background: coral;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  #prevBtn { left: 10%; }
+  #nextBtn { right: 10%; }
+</style>
+</head>
+<body>
+
+<div class="zlavaLand">
+  <div class="zlavaItem">1</div>
+  <div class="zlavaItem">2</div>
+  <div class="zlavaItem">3</div>
+</div>
+
+<button id="prevBtn" onclick="plusImg(-1)">Prev</button>
+<button id="nextBtn" onclick="plusImg(1)">Next</button>
+
+<script>
+let index = 0;
+const zlavy = document.querySelector('.zlavaLand');
+const zlavyProdukty = Array.from(zlavy.getElementsByClassName('zlavaItem'));
+
+function updatePositions() {
+  const middlePos = 50;   // % position of center
+  const offset = 30;      // how far left/right side items sit
+
+  zlavyProdukty.forEach((item, i) => {
+    item.classList.remove('middle', 'side');
+
+    if (i === index) {
+      item.classList.add('middle');
+      item.style.left = `${middlePos}%`;
+      item.style.zIndex = 3;
+    } else if (i === (index + 2) % zlavyProdukty.length) {
+      item.classList.add('side');
+      item.style.left = `${middlePos - offset}%`;
+      item.style.zIndex = 1;
+    } else if (i === (index + 1) % zlavyProdukty.length) {
+      item.classList.add('side');
+      item.style.left = `${middlePos + offset}%`;
+      item.style.zIndex = 1;
+    }
+  });
+}
+
+function plusImg(n) {
+  index += n;
+  if (index >= zlavyProdukty.length) index = 0;
+  if (index < 0) index = zlavyProdukty.length - 1;
+  updatePositions();
+}
+
+// Initial render
+updatePositions();
+</script>
+
+</body>
+</html>
