@@ -150,33 +150,29 @@ const produkty = [
       { name: 'strieborna', hex: '#c6c6c6', img: 'NL269b1p1-SK.webp' },
     ]
   },
-  //////////////////////////prislusenstvo//////////////////////////
   {
     id: 14,
-    name: 'iPhone 17 Pro TechWoven Case',
-    price: 59,
-    category: 'prislusenstvo',
+    name: 'MacBook Pro 14" M4 2024 512GB',
+    price: 2179,
+    category: 'notebooky',
     colors: [
-      { name: 'cierna', hex: '#1d1d1f', img: 'MGF34.jpeg' },
-      { name: 'zelena', hex: '#10630a', img: 'MGF74.jpeg' },
-      { name: 'sienna', hex: '#ab6036', img: 'MGF64.jpeg' },
-      { name: 'fialova', hex: '#7d1ea4', img: 'MGF54.jpeg' },
-      { name: 'modra', hex: '#002a79', img: 'MGF44.jpeg' },
+      { name: 'cierna', hex: '#1d1d1f', img: 'NL269b1o4-SK.webp' },
+      { name: 'siva', hex: '#838383', img: 'NL269b1o1-SK.webp' },
+      { name: 'strieborna', hex: '#c6c6c6', img: 'NL269b1p1-SK.webp' },
     ]
   },
   {
     id: 15,
-    name: 'iPhone 17 Pro TechWoven Case',
-    price: 59,
-    category: 'prislusenstvo',
+    name: 'MacBook Pro 14" M4 2024 512GB',
+    price: 2179,
+    category: 'notebooky',
     colors: [
-      { name: 'cierna', hex: '#1d1d1f', img: 'MGF34.jpeg' },
-      { name: 'zelena', hex: '#10630a', img: 'MGF74.jpeg' },
-      { name: 'sienna', hex: '#ab6036', img: 'MGF64.jpeg' },
-      { name: 'fialova', hex: '#7d1ea4', img: 'MGF54.jpeg' },
-      { name: 'modra', hex: '#002a79', img: 'MGF44.jpeg' },
+      { name: 'cierna', hex: '#1d1d1f', img: 'NL269b1o4-SK.webp' },
+      { name: 'siva', hex: '#838383', img: 'NL269b1o1-SK.webp' },
+      { name: 'strieborna', hex: '#c6c6c6', img: 'NL269b1p1-SK.webp' },
     ]
   },
+  //////////////////////////prislusenstvo//////////////////////////
   {
     id: 16,
     name: 'iPhone 17 Pro TechWoven Case',
@@ -218,6 +214,32 @@ const produkty = [
   },
   {
     id: 19,
+    name: 'iPhone 17 Pro TechWoven Case',
+    price: 59,
+    category: 'prislusenstvo',
+    colors: [
+      { name: 'cierna', hex: '#1d1d1f', img: 'MGF34.jpeg' },
+      { name: 'zelena', hex: '#10630a', img: 'MGF74.jpeg' },
+      { name: 'sienna', hex: '#ab6036', img: 'MGF64.jpeg' },
+      { name: 'fialova', hex: '#7d1ea4', img: 'MGF54.jpeg' },
+      { name: 'modra', hex: '#002a79', img: 'MGF44.jpeg' },
+    ]
+  },
+  {
+    id: 20,
+    name: 'iPhone 17 Pro TechWoven Case',
+    price: 59,
+    category: 'prislusenstvo',
+    colors: [
+      { name: 'cierna', hex: '#1d1d1f', img: 'MGF34.jpeg' },
+      { name: 'zelena', hex: '#10630a', img: 'MGF74.jpeg' },
+      { name: 'sienna', hex: '#ab6036', img: 'MGF64.jpeg' },
+      { name: 'fialova', hex: '#7d1ea4', img: 'MGF54.jpeg' },
+      { name: 'modra', hex: '#002a79', img: 'MGF44.jpeg' },
+    ]
+  },
+  {
+    id: 21,
     name: 'iPhone 17 Pro TechWoven Case',
     price: 59,
     category: 'prislusenstvo',
@@ -391,4 +413,5 @@ function decreaseQuantity(i) {
 }
 
 updateCart();
+
 
